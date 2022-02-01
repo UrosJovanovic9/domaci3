@@ -1,14 +1,12 @@
-import React from 'react'
-import Forma from "./Forma.jsx";
+import React from 'react';
+import Forma from './Forma.jsx';
 
 function FormaPrijava() {
-    return (
-        <div>
-
-            <Forma  prijava = {"da"}/>
-            
-        </div>
-    )
+	return (
+		<div>
+			<Forma prijava={'da'} />
+		</div>
+	);
 }
 
-export default FormaPrijava
+export default FormaPrijava;

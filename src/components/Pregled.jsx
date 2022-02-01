@@ -1,11 +1,37 @@
-import React from 'react'
+import React from 'react';
+import JedanFilm from './JedanFilm.jsx';
 
-function Pregled() {
-    return (
-        <div>
-            <h3>Ovo je pregled filmova</h3>
-        </div>
-    )
+function Pregled({ filmovi }) {
+	return (
+		<div className="pregledKomponenta">
+			<div>
+				{/* <h3>Ovo je pregled filmova</h3> */}
+
+				<table className="tabela" id="myTable">
+					<tbody>
+						{filmovi.map((film) => (
+							<tr key={film.id}>
+								<td>
+									<img className="slikatabela" src={film.slika} />
+								</td>
+								<td>{film.naziv}</td>
+								<td>{film.ocena}</td>
+								<td>{film.pregled}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+
+				{filmovi.map((f) => <JedanFilm film={f} key={f.id} prva={'nije'} />)}
+			</div>
+
+			{/* <div>
+				<button className="dugmeSortiranje" onClick={window['sortirajOpadajuce']}>
+					Prikaži prvo najbolje ocenjene
+				</button>
+			</div> */}
+		</div>
+	);
 }
 
-export default Pregled
+export default Pregled;

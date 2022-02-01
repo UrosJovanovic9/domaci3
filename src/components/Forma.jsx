@@ -1,10 +1,70 @@
-import React from "react";
+import React from 'react';
+import { useHistory } from "react-router-dom";
+import Polje from "./Polje.jsx"
 
 function Forma({ prijava }) {
-  return (
-    <div>
-      <form className="forma">
+
+
+	return (
+		<div>
+			<form className="forma">
+				{prijava === 'ne' ? (
+					<h2 className="prijavaforma" for="forma">
+						Registracija
+					</h2>
+				) : (
+					<h2 className="prijavaforma" for="forma">
+						Prijava
+					</h2>
+				)}
+
+        <Polje/>
+				
         {prijava === "ne" ? (
+          <>
+        <div className="form-group">
+              <label for="formGroupExampleInput">Ime</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput"
+                placeholder="Ime"
+              />
+            </div>
+            <div className="form-group">
+              <label for="formGroupExampleInput2">Prezime</label>
+              <input
+                type="text"
+                class="form-control"
+                id="formGroupExampleInput2"
+                placeholder="Prezime"
+              />
+            </div>
+            <div className="btnForma">
+              <button onClick={()=>{ alert('Uspesno ste se registrovali!'); }} className="dugme1" type="submit">
+                Registracija
+              </button>
+            </div>
+
+            </>) : (<>
+            <div className="btnForma">
+              <button onClick={()=>{ alert('Uspesno ste se prijavili!'); }} className="dugme1" type="submit">
+                Prijava
+              </button>
+            </div>
+            <div className="btnForma1">
+              <button className="dugme2" type="submit">
+                Zaboravljena lozinka?
+              </button>
+            </div>
+            <div className="btnForma1">
+              <button  className="dugme3" type="submit">
+                Još uvek niste registrovani?
+              </button>
+            </div>
+            </>)}
+
+				{/* {prijava === "ne" ? (
           <>
             <h2 className="prijavaforma" for="forma">
               Registracija
@@ -39,7 +99,7 @@ function Forma({ prijava }) {
             <div className="form-group">
               <label for="formGroupExampleInput2">Lozinka</label>
               <input
-                type="text"
+                type="password"
                 class="form-control"
                 id="formGroupExampleInput2"
                 placeholder="Lozinka"
@@ -91,10 +151,10 @@ function Forma({ prijava }) {
               </button>
             </div>
           </>
-        )}
-      </form>
-    </div>
-  );
+        )} */}
+			</form>
+		</div>
+	);
 }
 
 export default Forma;

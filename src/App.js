@@ -21,6 +21,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Forma from "./components/Forma";
 import FormaPrijava from "./components/FormaPrijava";
 import FormaRegistracija from "./components/FormaRegistracija";
+import Dugme from "./components/Dugme";
 
 function App() {
   const [pregledFilmovi, setPregledFilmovi] = useState([]);
@@ -148,6 +149,8 @@ function App() {
     setPregledFilmovi1(brojFilmova1);
   }
 
+  
+
   function dodajPregled1(id) {
     filmovi1.forEach((f) => {
       if (f.id === id) {
@@ -186,7 +189,8 @@ function App() {
             path="/pregled/*"
             element={
               <>
-                <Pregled filmovi={pregledFilmovi}  />
+                <Pregled filmovi={pregledFilmovi}/>
+                <Dugme/>
                 <Pregled filmovi={pregledFilmovi1}/>
               </>
             }
