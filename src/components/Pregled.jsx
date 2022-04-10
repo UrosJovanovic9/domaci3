@@ -24,12 +24,6 @@ function Pregled({ filmovi }) {
 
 				{filmovi.map((f) => <JedanFilm film={f} key={f.id} prva={'nije'} />)}
 			</div>
-
-			{/* <div>
-				<button className="dugmeSortiranje" onClick={window['sortirajOpadajuce']}>
-					Prikaži prvo najbolje ocenjene
-				</button>
-			</div> */}
 		</div>
 	);
 }

@@ -149,8 +149,6 @@ function App() {
     setPregledFilmovi1(brojFilmova1);
   }
 
-  
-
   function dodajPregled1(id) {
     filmovi1.forEach((f) => {
       if (f.id === id) {

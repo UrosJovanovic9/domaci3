@@ -10,20 +10,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// ReactDOM.render(
-//   <>
-//     <h1>Cao svima</h1>
-//     <p>Kako ste</p>
-//   </>,
-//   document.getElementById("root")
-// );
 
-// const prom = <h1>Cao svima</h1>;
-
-// ReactDOM.render(
-//   <div>
-//     {prom}
-//     <p>Kako ste</p>
-//   </div>,
-//   document.getElementById("root")
-// );
